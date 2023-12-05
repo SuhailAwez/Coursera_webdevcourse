@@ -25,6 +25,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+  
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -49,3 +50,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        
+remote_theme: pages-themes/slate@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
